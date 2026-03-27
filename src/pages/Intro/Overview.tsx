@@ -7,7 +7,7 @@ export default function Overview() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-10 text-black leading-relaxed">
+    <div className="max-w-6xl text-2xl tracking-wide mx-auto px-6 py-10 text-black leading-relaxed">
       {/* Introduction */}
       <motion.h1
         className="text-3xl font-bold mb-6"

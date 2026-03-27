@@ -186,8 +186,8 @@ const NotchFeatures = () => {
                   <Icon className="text-white" size={30} />
                 </motion.div>
 
-                <h3 className="text-xl font-semibold text-[#111C2D]">{item.title}</h3>
-                <p className="mt-3 text-[#111C2D]/60 text-lg leading-relaxed">
+                <h3 className="text-2xl font-semibold text-[#111C2D]">{item.title}</h3>
+                <p className="mt-3 text-[#111C2D]/60 text-xl leading-relaxed">
                   {item.description}
                 </p>
 
@@ -239,8 +239,8 @@ const NotchFeatures = () => {
                   <Icon className="text-white" size={30} />
                 </motion.div>
 
-                <h3 className="text-xl font-semibold text-[#111C2D]">{item.title}</h3>
-                <p className="mt-3 text-[#111C2D]/60 text-lg leading-relaxed">{item.description}</p>
+                <h3 className="text-2xl font-semibold text-[#111C2D]">{item.title}</h3>
+                <p className="mt-3 text-[#111C2D]/60 text-xl leading-relaxed">{item.description}</p>
 
                 {item.links && (
                   <div className="mt-4 space-y-1">
@@ -248,7 +248,7 @@ const NotchFeatures = () => {
                       <a
                         key={linkIndex}
                         href="#"
-                        className="block text-[#FF7037] hover:underline text-sm"
+                        className="block text-[#FF7037] hover:underline text-xl"
                       >
                         {link}
                       </a>
@@ -323,8 +323,8 @@ const NotchFeatures = () => {
                   <div className="mb-4 w-12 h-12 flex items-center justify-center rounded-lg bg-[#FF7037]/20 border border-[#FF7037]/30">
                     <Icon className="text-[#FF7037]" size={24} />
                   </div>
-                  <h3 className="text-xl font-semibold text-[#111C2D] mb-3">{item.title}</h3>
-                  <p className="text-[#111c2d99] text-lg leading-relaxed">{item.description}</p>
+                  <h3 className="text-2xl font-semibold text-[#111C2D] mb-3">{item.title}</h3>
+                  <p className="text-[#111c2d99] text-xl leading-relaxed">{item.description}</p>
                 </motion.div>
               );
             })}
@@ -363,8 +363,8 @@ const NotchFeatures = () => {
                 <div className="mb-6 w-16 h-16 flex items-center justify-center rounded-xl bg-[#FF7037]/20 border border-[#FF7037]/20">
                   <Icon className="text-[#FF7037]" size={30} />
                 </div>
-                <h3 className="text-xl font-semibold text-[#111C2D] mb-3">{item.title}</h3>
-                <p className="text-[#111c2d99]">{item.description}</p>
+                <h3 className="text-2xl font-semibold text-[#111C2D] mb-3">{item.title}</h3>
+                <p className="text-[#111c2d99] text-xl">{item.description}</p>
               </motion.div>
             );
           })}

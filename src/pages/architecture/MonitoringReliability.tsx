@@ -19,7 +19,7 @@ export default function MonitoringReliability() {
 
   return (
     <motion.div
-      className="max-w-4xl mx-auto px-4 py-10 text-black"
+      className="max-w-6xl text-2xl tracking-wide mx-auto px-4 py-10 text-black"
       initial="hidden"
       animate="show"
       variants={containerVariants}

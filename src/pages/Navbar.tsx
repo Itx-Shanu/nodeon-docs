@@ -35,7 +35,7 @@ export default function Navbar() {
             <Link
               key={item.label}
               to={item.path}
-              className="px-4 py-2 text-sm font-bold text-gray-600 rounded-full hover:text-amber-500 transition"
+              className="px-4 py-2 lg:text-sm xl:text-lg text-gray-600 rounded-full hover:text-amber-500 transition"
             >
               {item.label}
             </Link>
@@ -59,7 +59,7 @@ export default function Navbar() {
               <Link
                 key={item.label}
                 to={item.path}
-                className="text-left px-4 py-2 text-gray-600 rounded-lg font-bold hover:bg-amber-50 hover:text-amber-500 transition"
+                className="text-left px-4 py-2 text-gray-600 rounded-lg  hover:bg-amber-50 hover:text-amber-500 transition"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}

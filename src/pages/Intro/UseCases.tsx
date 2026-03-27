@@ -7,7 +7,7 @@ export default function UseCases() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-10 text-black leading-relaxed">
+    <div className="max-w-6xl mx-auto text-2xl tracking-wide px-6 py-10 text-black leading-relaxed">
       {/* Use Case Heading */}
       <motion.h2
         className="text-2xl font-semibold mb-4"

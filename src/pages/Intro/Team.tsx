@@ -7,7 +7,7 @@ export default function Team() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-10 text-black leading-relaxed">
+    <div className="max-w-6xl text-2xl tracking-wide mx-auto px-6 py-10 text-black leading-relaxed">
       {/* Team Heading */}
       <motion.h2 className="text-2xl font-semibold mb-4" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
         Team

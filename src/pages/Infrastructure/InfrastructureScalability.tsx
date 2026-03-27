@@ -12,7 +12,7 @@ export default function InfrastructureScalability() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-10 text-black">
+    <div className="max-w-5xl text-2xl tracking-wide mx-auto px-6 py-10 text-black">
       
       {/* Title */}
       <motion.h1

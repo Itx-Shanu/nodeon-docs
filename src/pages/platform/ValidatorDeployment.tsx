@@ -1,6 +1,6 @@
 export default function ValidatorDeployment() {
   return (
-    <div className="max-w-6xl mx-auto px-6 py-10 text-black">
+    <div className="max-w-6xl text-2xl tracking-wide mx-auto px-6 py-10 text-black">
       {/* Title */}
       <h1 className="text-4xl font-bold mb-8">
         Validator Deployment

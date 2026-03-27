@@ -18,7 +18,7 @@ export default function ValidatorDeploymentWorkflow() {
 
   return (
     <motion.div
-      className="max-w-6xl mx-auto px-6 py-10 text-black"
+      className="max-w-6xl text-2xl tracking-wide mx-auto px-6 py-10 text-black"
       initial="hidden"
       animate="show"
       variants={containerVariants}
@@ -42,7 +42,7 @@ export default function ValidatorDeploymentWorkflow() {
 
         {/* Stage 1 */}
         <motion.div className="space-y-2" variants={sectionVariants}>
-          <h3 className="text-xl font-semibold">1. Infrastructure Selection</h3>
+          <h3 className="text-2xl tracking-wide font-semibold">1. Infrastructure Selection</h3>
           <p>
             Participants select the validator infrastructure package suitable for their
             participation requirements. Available packages include:
@@ -55,7 +55,7 @@ export default function ValidatorDeploymentWorkflow() {
 
         {/* Stage 2 */}
         <motion.div className="space-y-2" variants={sectionVariants}>
-          <h3 className="text-xl font-semibold">2. Network Selection</h3>
+          <h3 className="text-2xl tracking-wide font-semibold">2. Network Selection</h3>
           <p>
             Participants choose the blockchain network where their validator node will be
             deployed. Network options may include Avalanche, Cosmos, or Polygon ecosystems.
@@ -64,7 +64,7 @@ export default function ValidatorDeploymentWorkflow() {
 
         {/* Stage 3 */}
         <motion.div className="space-y-2" variants={sectionVariants}>
-          <h3 className="text-xl font-semibold">3. Validator Configuration</h3>
+          <h3 className="text-2xl tracking-wide font-semibold">3. Validator Configuration</h3>
           <p>
             Once the network and infrastructure package are selected, the validator node
             configuration process begins. Nodes On infrastructure automatically prepares
@@ -74,7 +74,7 @@ export default function ValidatorDeploymentWorkflow() {
 
         {/* Stage 4 */}
         <motion.div className="space-y-2" variants={sectionVariants}>
-          <h3 className="text-xl font-semibold">4. Node Activation</h3>
+          <h3 className="text-2xl tracking-wide font-semibold">4. Node Activation</h3>
           <p>
             After deployment is completed, the validator node connects to the blockchain
             network and begins participating in consensus operations. Monitoring systems

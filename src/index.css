@@ -1,10 +1,14 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import "@fontsource-variable/inter";
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Handlee&family=Unbounded:wght@200..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Handlee&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@200..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-@custom-variant dark (&:is(.dark *));
+/* @import "@fontsource-variable/inter"; */
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Handlee&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Unbounded:wght@200..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap'); */
+/* @custom-variant dark (&:is(.dark *)); */
+
+@theme {
+      --font-urbanist: 'Urbanist';
+}
 
 :root {
     --background: oklch(1 0 0);
@@ -75,8 +79,8 @@
     --sidebar-ring: oklch(0.556 0 0);
 }
 
-@theme inline {
-    --font-sans: 'Urbanist', sans-serif;
+ @theme inline {
+      --font-urbanist: 'Urbanist';
     --font-btn:  'Inter', sans-serif;
     --color-sidebar-ring: var(--sidebar-ring);
     --color-sidebar-border: var(--sidebar-border);
@@ -116,24 +120,33 @@
     --radius-2xl: calc(var(--radius) * 1.8);
     --radius-3xl: calc(var(--radius) * 2.2);
     --radius-4xl: calc(var(--radius) * 2.6);
-}
+} 
 
+
+ @theme {
+  --font-urbanist: "Urbanist";
+}
+ 
 @layer base {
+  
+
   * {
     @apply border-border outline-ring/50;
     }
   body {
     @apply bg-background text-foreground;
     }
-  h1,h2.h3.h4.h5,h6,p {
-    @apply font-sans;
+   
+    h1,h2,h3,h4,h5,h6,p ,ul ,li{
+      @apply font-urbanist;
     }
+
     Button {
       @apply font-btn;
     }
     
 }
-
+ 
 
 .btn {
   @apply rounded-2xl font-medium 
@@ -160,4 +173,4 @@
   hover:-translate-y-1 
   hover:scale-[1.03]
   hover:bg-[#FF7037]/10;
-}
+} 

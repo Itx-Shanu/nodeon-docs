@@ -51,6 +51,7 @@ import MonitoringReliability from "./pages/architecture/MonitoringReliability"
 
 import Resources from "./pages/resources"
 import ResourcesHome from "./pages/resources/Home"
+import Footer from "./pages/Footer"
 
 
 export function App() {
@@ -177,6 +178,8 @@ export function App() {
 
 
       </Routes>
+
+      <Footer/>
     </div>
   )
 }
