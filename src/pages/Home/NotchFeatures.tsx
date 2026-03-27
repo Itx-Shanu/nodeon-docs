@@ -111,12 +111,12 @@ const links = [
   {
     icon: Send,
     title: "Join Telegram",
-    description: "Check out the NodeAI community on Telegram.",
+    description: "Check out the Node ON community on Telegram.",
   },
   {
     icon: Monitor,
     title: "Visit Website",
-    description: "Visit the NodeAI website to learn more about our platform.",
+    description: "Visit the Node ON website to learn more about our platform.",
   },
   {
     icon: Rocket,
