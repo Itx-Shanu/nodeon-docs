@@ -37,7 +37,7 @@ const Header: React.FC = () => {
       {/* Sidebar */}
       <aside
         className={`
-          fixed left-4 top-30 h-[70%] shadow-xl w-72 bg-white rounded-2xl
+          fixed left-4 top-30 lg:h-145 max-2xl:h-140 2xl:h-170 shadow-xl w-72 bg-white rounded-2xl
           border border-black/10 z-40 transform transition-all duration-300
           ${mobileMenuOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
         `}
