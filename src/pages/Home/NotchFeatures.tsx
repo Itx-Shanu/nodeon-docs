@@ -14,56 +14,7 @@ import {
 } from "lucide-react";
 import { motion } from "motion/react";
 
-const features = [
-  {
-    icon: Wallet,
-    badge: "Profit Distribution",
-    title: "Revenue Sharing",
-    description:
-      "Learn more about our Revenue Sharing model. This system transforms users and contributors into stakeholders, rewarding their engagement with the platform's financial success.",
-    button: "GET STARTED",
-  },
-  {
-    icon: Layers,
-    badge: "Blockchain",
-    title: "Layer 1",
-    description:
-      "Node ON is at the vanguard, introducing a specialized Layer 1 (L1) blockchain designed to streamline the distribution of tasks across a decentralized network of nodes.",
-    button: "READ MORE",
-  },
-  {
-    icon: Cpu,
-    badge: "Rent",
-    title: "Renting",
-    description:
-      "We provide clients with bespoke access to computational resources such as GPUs, CPUs, RAM, disk storage, and more, encapsulated primarily within Docker containers.",
-    button: "FIND RESOURCES",
-  },
-  {
-    icon: Database,
-    badge: "Host a Node",
-    title: "Lending",
-    description:
-      "Becoming a node provider on Node ON involves a clear and secure setup process. Follow these steps to prepare your node for our network.",
-    button: "HOST A NODE",
-  },
-  {
-    icon: Coins,
-    badge: "Stake to earn",
-    title: "Staking $GPU Tokens",
-    description:
-      "We offer 'Stake and Earn ETH' feature that rewards users with Ethereum (ETH) for their engagement and long-term commitment to the platform.",
-    button: "LEARN ABOUT STAKING",
-  },
-  {
-    icon: Zap,
-    badge: "Instant Access",
-    title: "On Demand Nodes",
-    description:
-      "Node ON is reshaping the landscape of computational resource, offering a scalable and flexible solution for users with varying computational demands.",
-    button: "HOW IT WORKS",
-  },
-];
+
 
 const endpoint = [
   {
@@ -147,58 +98,8 @@ const itemVariant ={
 const NotchFeatures = () => {
   return (
     <>
-      {/* ---------- FEATURES ---------- */}
-      <section className="py-20 px-4 md:px-10">
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center text-4xl md:text-6xl lg:text-7xl font-bold tracking-wide text-[#111C2D]/80 mb-16"
-        >
-          Top notch features
-        </motion.h2>
-
-        <motion.div
-          className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2 lg:grid-cols-3"
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
-        >
-          {features.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <motion.div
-                key={index}
-                variants={itemVariant}
-                whileHover={{ y: -10, scale: 1.03 }}
-                className="relative bg-linear-to-br from-[#FF7037]/20 to-transparent rounded-2xl border border-[#FF7037]/30 p-6 shadow-lg hover:border-[#FF7037] transition-all duration-300"
-              >
-                <span className="absolute right-4 top-6 text-sm border border-gray-900 px-3 py-1 rounded-full text-[#111C2D]">
-                  {item.badge}
-                </span>
-
-                <motion.div
-                  className="mb-6 w-16 h-16 flex items-center justify-center rounded-full bg-[#FF7037]/40"
-                  whileHover={{ rotate: 8, scale: 1.1 }}
-                >
-                  <Icon className="text-white" size={30} />
-                </motion.div>
-
-                <h3 className="text-2xl font-semibold text-[#111C2D]">{item.title}</h3>
-                <p className="mt-3 text-[#111C2D]/60 text-xl leading-relaxed">
-                  {item.description}
-                </p>
-
-                <button className="mt-6 w-full rounded-full bg-linear-to-l from-[#FF7037] to-[#FFCB3C] py-2 text-sm font-semibold text-white">
-                  {item.button}
-                </button>
-              </motion.div>
-            );
-          })}
-        </motion.div>
-      </section>
+     
+     
 
       {/* ---------- ENDPOINT ---------- */}
       <section className="py-20 px-4 md:px-10">
