@@ -1,10 +1,7 @@
 import {
   Cpu,
   Layers,
-  Wallet,
-  Database,
-  Coins,
-  Zap,
+ 
   ChartNetwork,
   Cable,
   CircleDashed,
