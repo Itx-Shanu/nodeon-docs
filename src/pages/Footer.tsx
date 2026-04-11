@@ -1,5 +1,4 @@
-import { Mail, Send, X } from "lucide-react";
-
+import { Facebook, Instagram, Youtube, Mail } from "lucide-react";
 export default function Footer() {
   return (
     <footer className=" mt-20 bg-linear-to-t from-[#FF7037]/30 to-[#FFCB3C]/0 text-sm text-gray-700">
@@ -7,18 +6,42 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between px-2 md:px-6 py-4">
           {/* Left Icons */}
-          <div className="flex  items-center gap-5 text-orange-500">
-            <button className="hover:scale-110 transition">
-              <X size={18} />
-            </button>
-
-            <button className="bg-orange-400 text-white p-2 rounded-full hover:scale-110 transition">
-              <Send size={16} />
-            </button>
-
-            <button className="border border-orange-400 p-2 rounded hover:scale-110 transition">
+          <div className="flex items-center gap-5 text-orange-500">
+            <a
+              href="mailto:admin@nodeson.us"
+              className="border border-orange-400 p-2 rounded hover:scale-110 transition"
+            >
               <Mail size={16} />
-            </button>
+            </a>
+           
+            <a
+              href="https://www.facebook.com/groups/nodesonus"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-orange-400 p-2 rounded hover:scale-110 transition"
+            >
+              <Facebook size={18} />
+            </a>
+
+            <a
+              href="https://www.instagram.com/nodesonus/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-orange-400 p-2 rounded hover:scale-110 transition"
+            >
+              <Instagram size={16} />
+            </a>
+
+            <a
+              href="https://www.youtube.com/@NodesOnUS/videos"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-orange-400 p-2 rounded hover:scale-110 transition"
+            >
+              <Youtube size={16} />
+            </a>
+
+           
           </div>
 
           {/* Right Button */}

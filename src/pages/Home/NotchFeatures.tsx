@@ -36,7 +36,7 @@ const endpoint = [
     title: "Future features",
     description: "Stay tuned for exciting updates!",
     button: "FIND RESOURCES",
-    links: ["LLM", "Text to image", "Text to video"], // Added links array
+    links: ["LLM", "Text to image", "Text to video"],
   },
 ];
 
@@ -45,34 +45,36 @@ const architectureItems = [
     icon: Cpu,
     title: "Hardware Architecture",
     description:
-      "Our foundation is its state-of-the-art GPU farm, designed to exceed expectations.",
+      "Our foundation is its state-of-the-art Nodes farming, designed to exceed expectations.",
   },
   {
     icon: CircleDashed,
     title: "Software Architecture",
     description:
-      "Our software architecture is crafted with precision, focusing on optimizing GPU acceleration.",
+      "Our software architecture is crafted with precision, focusing on optimizing Nodes acceleration.",
   },
 ];
 
 const links = [
   {
     icon: Send,
-    title: "Join Telegram",
+    title: "Join Facebook",
     description: "Check out the Node ON community on Telegram.",
+    url: "https://www.facebook.com/groups/nodesonus", 
   },
   {
     icon: Monitor,
     title: "Visit Website",
     description: "Visit the Node ON website to learn more about our platform.",
+    url: "https://nodeson.us/",
   },
   {
     icon: Rocket,
     title: "Start Now",
-    description: "Visit our dapp to start renting GPUs for your AI projects.",
+    description: "Visit our dapp to start renting Nodes for your AI projects.",
+    url: "https://nodeson.us/dapp",
   },
 ];
-
 // Motion Variants
 const container = {
   hidden: {},
@@ -99,69 +101,82 @@ const NotchFeatures = () => {
      
 
       {/* ---------- ENDPOINT ---------- */}
-      <section className="py-20 px-4 md:px-10">
-        <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center text-4xl md:text-6xl lg:text-7xl font-bold tracking-wide text-[#111C2D]/80 mb-16"
-        >
-          Check out our endpoints
-        </motion.h2>
+     <section className="py-20 px-4 md:px-10">
+  <motion.h2
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6 }}
+    className="text-center text-4xl md:text-6xl lg:text-7xl font-bold tracking-wide text-[#111C2D]/80 mb-16"
+  >
+    Check Out Our EndPoints
+  </motion.h2>
 
+  <motion.div
+    className="mx-auto grid max-w-7xl gap-8 grid-cols-1 lg:grid-cols-3 auto-rows-fr"
+    variants={container}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true }}
+  >
+    {endpoint.map((item, index) => {
+      const Icon = item.icon;
+
+      return (
         <motion.div
-          className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2 lg:grid-cols-3"
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true }}
+          key={index}
+          variants={itemVariant}
+          whileHover={{ y: -10, scale: 1.03 }}
+          className="relative bg-linear-to-bl from-[#FF7037]/20 to-transparent rounded-2xl border border-[#FF7037]/30 p-6 shadow-lg hover:border-[#FF7037] transition-all duration-300 flex flex-col h-full"
         >
-          {endpoint.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <motion.div
-                key={index}
-                variants={itemVariant}
-                whileHover={{ y: -10, scale: 1.03 }}
-                className="relative bg-linear-to-bl from-[#FF7037]/20 to-transparent rounded-2xl border border-[#FF7037]/30 p-6 shadow-lg hover:border-[#FF7037] transition-all duration-300"
-              >
-                <span className="absolute right-4 top-6 text-sm border border-gray-900 px-3 py-1 rounded-full text-[#111C2D]">
-                  {item.badge}
-                </span>
+          {/* Badge */}
+          <span className="absolute right-4 top-6 text-sm border border-gray-900 px-3 py-1 rounded-full text-[#111C2D]">
+            {item.badge}
+          </span>
 
-                <motion.div
-                  className="mb-6 w-16 h-16 flex items-center justify-center rounded-full bg-[#FF7037]/40"
-                  whileHover={{ rotate: 8, scale: 1.1 }}
-                >
-                  <Icon className="text-white" size={30} />
-                </motion.div>
+          {/* Icon */}
+          <motion.div
+            className="mb-6 w-16 h-16 flex items-center justify-center rounded-full bg-[#FF7037]/40"
+            whileHover={{ rotate: 8, scale: 1.1 }}
+          >
+            <Icon className="text-white" size={30} />
+          </motion.div>
 
-                <h3 className="text-2xl font-semibold text-[#111C2D]">{item.title}</h3>
-                <p className="mt-3 text-[#111C2D]/60 text-xl leading-relaxed">{item.description}</p>
+          {/* Content */}
+          <div className="flex flex-col grow">
+            <h3 className="text-2xl font-semibold text-[#111C2D]">
+              {item.title}
+            </h3>
 
-                {item.links && (
-                  <div className="mt-4 space-y-1">
-                    {item.links.map((link, linkIndex) => (
-                      <a
-                        key={linkIndex}
-                        href="#"
-                        className="block text-[#FF7037] hover:underline text-xl"
-                      >
-                        {link}
-                      </a>
-                    ))}
-                  </div>
-                )}
+            <p className="mt-3 text-[#111C2D]/60 text-xl leading-relaxed">
+              {item.description}
+            </p>
 
-                <button className="mt-6 w-full rounded-full bg-linear-to-l from-[#FF7037] to-[#FFCB3C] py-2 text-sm font-semibold text-white">
-                  {item.button}
-                </button>
-              </motion.div>
-            );
-          })}
+            {/* Links */}
+            {item.links && (
+              <div className="mt-4 space-y-1">
+                {item.links.map((link, linkIndex) => (
+                  <a
+                    key={linkIndex}
+                    href="#"
+                    className="block text-[#FF7037] hover:underline text-xl"
+                  >
+                    {link}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Button */}
+          <button className="mt-auto w-full rounded-full bg-linear-to-l from-[#FF7037] to-[#FFCB3C] py-2 text-sm font-semibold text-white hover:opacity-90 transition">
+            {item.button}
+          </button>
         </motion.div>
-      </section>
+      );
+    })}
+  </motion.div>
+</section>
 
       {/* ---------- ARCHITECTURE ---------- */}
       <section className="py-20 px-4 md:px-10">
@@ -172,7 +187,7 @@ const NotchFeatures = () => {
           transition={{ duration: 0.6 }}
           className="text-center text-4xl md:text-5xl lg:text-6xl font-bold tracking-wide text-[#111C2D]/80 mb-16"
         >
-          Our architecture
+          Our Architecture
         </motion.h2>
 
         <div className="mx-auto max-w-6xl grid gap-6 md:grid-cols-2">
@@ -239,7 +254,7 @@ const NotchFeatures = () => {
           transition={{ duration: 0.6 }}
           className="text-center text-4xl md:text-6xl lg:text-7xl font-bold text-[#111C2D]/80 mb-16"
         >
-          Useful links
+          Useful Links
         </motion.h2>
 
         <motion.div
@@ -249,23 +264,32 @@ const NotchFeatures = () => {
           whileInView="show"
           viewport={{ once: true }}
         >
-          {links.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <motion.div
-                key={index}
-                variants={itemVariant}
-                whileHover={{ y: -8, scale: 1.03 }}
-                className="relative bg-linear-to-b from-[#FF7037]/20 to-transparent rounded-2xl border border-[#FF7037]/20 p-8 text-center hover:shadow-lg hover:border-[#FF7037]/50 transition-all duration-300 min-h-70 flex flex-col items-center justify-center"
-              >
-                <div className="mb-6 w-16 h-16 flex items-center justify-center rounded-xl bg-[#FF7037]/20 border border-[#FF7037]/20">
-                  <Icon className="text-[#FF7037]" size={30} />
-                </div>
-                <h3 className="text-2xl font-semibold text-[#111C2D] mb-3">{item.title}</h3>
-                <p className="text-[#111c2d99] text-xl">{item.description}</p>
-              </motion.div>
-            );
-          })}
+         {links.map((item, index) => {
+  const Icon = item.icon;
+  return (
+    <motion.a
+      href={item.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      key={index}
+      variants={itemVariant}
+      whileHover={{ y: -8, scale: 1.03 }}
+      className="relative bg-linear-to-b from-[#FF7037]/20 to-transparent rounded-2xl border border-[#FF7037]/20 p-8 text-center hover:shadow-lg hover:border-[#FF7037]/50 transition-all duration-300 min-h-70 flex flex-col items-center justify-center cursor-pointer"
+    >
+      <div className="mb-6 w-16 h-16 flex items-center justify-center rounded-xl bg-[#FF7037]/20 border border-[#FF7037]/20">
+        <Icon className="text-[#FF7037]" size={30} />
+      </div>
+
+      <h3 className="text-2xl font-semibold text-[#111C2D] mb-3">
+        {item.title}
+      </h3>
+
+      <p className="text-[#111c2d99] text-xl">
+        {item.description}
+      </p>
+    </motion.a>
+  );
+})}
         </motion.div>
       </section>
     </>
@@ -273,3 +297,9 @@ const NotchFeatures = () => {
 };
 
 export default NotchFeatures;
+
+
+
+
+
+

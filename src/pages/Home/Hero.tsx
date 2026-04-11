@@ -46,7 +46,7 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           className="max-w-4xl text-4xl md:text-6xl lg:text-7xl font-bold tracking-wide text-[#111C2D]/80"
         >
-          The complete guide to validator infrastructure and node operations
+          The Complete Guide to Validator Infrastructure and Nodes Operations
         </motion.h1>
 
         <motion.p
